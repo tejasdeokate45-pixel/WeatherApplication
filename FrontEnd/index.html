@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- Animated background blobs -->
+  <div class="bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+ 
+  <div class="container">
+ 
+    <!-- Header -->
+    <div class="header">
+      <div class="header-icon">🌤</div>
+      <h1>Weather<span>Cast</span></h1>
+      <p class="tagline">Real-time forecasts, beautifully shown</p>
+    </div>
+ 
+    <!-- Search Bar -->
+    <div class="search-box">
+      <div class="search-inner">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="city" placeholder="Search city…" autocomplete="off" />
+        <div class="days-wrap">
+          <select id="days">
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="4">4 Days</option>
+            <option value="5" selected>5 Days</option>
+          </select>
+        </div>
+        <button onclick="getForecast()">
+          <span>Search</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Forecast Output -->
+    <div id="forecast" class="forecast-container"></div>
+ 
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
