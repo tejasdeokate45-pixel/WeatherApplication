@@ -7,7 +7,7 @@ async function getForecast() {
         return;
     }
 
-    const url = `http://localhost:8080/weather/forecast?city=${encodeURIComponent(city)}&days=${days}`;
+    const url = `https://weatherapplication-production-5a26.up.railway.app/weather/forecast?city=${encodeURIComponent(city)}&days=${days}`;
     const container = document.getElementById("forecast");
 
     // Loading state
